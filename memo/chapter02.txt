@@ -1,0 +1,94 @@
+------chapter 02
+
+The entire line, including the printf function (the "f" stands for "formatted"), its argument within the parentheses and the semicolon(;), is called a statement.
+printf 함수("f"는 "formatted"를 나타냄), 괄호 안의 인수 및 세미콜론(;)을 포함한 전체 행을 명령문이라고 합니다.
+
+
+이스케이프 시퀀스
+https://docs.microsoft.com/ko-kr/cpp/c-language/escape-sequences?view=msvc-170
+
+Because the backslash has special meaning in a string, i.e, the compliler recognizes it as an escape character, we use a double backslash to place a single backslash in a string.
+백슬래시는 문자열에서 특별한 의미를 갖기 때문에, 즉 컴파일러는 이를 이스케이프 문자로 인식하므로 이중 백슬래시를 사용하여 문자열에 단일 백슬래시를 배치합니다.
+
+Printing a double quotes also presents a problem because double quotes mark the boundaries of a string such quotes are not printed.
+큰 따옴표를 인쇄하면 큰 따옴표가 인쇄되지 않는 문자열의 경계를 표시하기 때문에 문제가 발생합니다.
+
+Standard library functions like printf and scanf are not part of the C programming.
+printf 및 scanf와 같은 표준 라이브러리 함수는 C 프로그래밍의 일부가 아닙니다.
+
+when the compiler compiles a printf statement, it merely provides space in the object progrma for a "call" to the library function.
+컴파일러가 printf 문을 컴파일할 때 라이브러리 함수에 대한 "호출"을 위해 개체 프로그램에 공간만 제공합니다.
+
+For this reason, the linked program is called an executable. If the function name is misspelled, the linker will spot the error, because it will not be able to match the name in the C program with the name of any known function in the libraries.
+이러한 이유로 링크된 프로그램을 실행 파일이라고 합니다. 함수 이름의 철자가 잘못된 경우 링커는 오류를 찾아낼 것입니다. 그 이유는 C 프로그램의 이름을 라이브러리의 알려진 함수 이름과 일치시킬 수 없기 때문입니다.
+
+followed by a space
+뒤에 공백
+
+The C standard allows you to place each variable definition anywhere in main before that variable's first use in the code(though some older compilers do not allow this.) You will see later why you should define variables close to their first use.
+C 표준을 사용하면 코드에서 해당 변수를 처음 사용하기 전에 main의 아무 곳에나 각 변수 정의를 배치할 수 있습니다(일부 이전 컴파일러에서는 이를 허용하지 않습니다.). 나중에 왜 변수를 처음 사용할 때와 가깝게 정의해야 하는지 알게 될 것입니다.
+
+The first letter of an identifier used as a simple variable name should be a lowercase letter. Later in the test we'll assign special significance to identifiers that begin with a capital letter and to identifiers that use all capital letters.
+단순 변수명으로 사용되는 식별자의 첫 글자는 소문자여야 합니다. 나중에 테스트에서 대문자로 시작하는 식별자와 모두 대문자를 사용하는 식별자에 특별한 의미를 할당할 것입니다.
+
+The % in this context is treated by scanf (and printf as we'll See) as a special character that begins a conversion specifier.
+이 컨텍스트에서 %는 변환 지정자를 시작하는 특수 문자로 scanf(및 우리가 보게 될 printf)에 의해 처리됩니다.
+
+prompting for and inputting the second integer
+두 번째 정수에 대한 프롬프트 및 입력
+
+A calculatin in an assignment statement must be on the right side of the = operator. It's a compilation error to place a calculations on the left side of an assignment operator.
+대입문의 계산식은 = 연산자의 오른쪽에 있어야 합니다. 할당 연산자의 왼쪽에 계산을 배치하는 것은 컴파일 오류입니다.
+
+Line 20 calls function printf to print the literal 'Sum' is followed by the numerical value of variable 'sum' on the screen.
+20행은 리터럴 'Sum' 다음에 변수 'sum'의 숫자 값이 화면에 표시되도록 printf 함수를 호출합니다.
+
+combining a variable definition and assignment statement.
+변수 정의와 대입문을 결합합니다.
+
+Forgetting to precede a variable in a scanf statement with an ampersand when that variable should, in fact, be preceded by an ampersand results in an execution-time error. On many systems, this causes a "segmentation fault" or "access violation". Such an error occurs when a user's program attempts to access a part of the computer's memoty to which it doesn't have access privileges. The precise cause of this error will be explained in Chapter 3.
+실제로 변수 앞에 앰퍼샌드가 있어야 하는데 scanf 문의 변수 앞에 앰퍼샌드가 오는 것을 잊어버리면 실행 시간 오류가 발생합니다. 많은 시스템에서 이로 인해 "세그먼트 오류" 또는 "액세스 위반"이 발생합니다. 이러한 오류는 사용자의 프로그램이 접근 권한이 없는 컴퓨터 메모리의 일부에 접근을 시도할 때 발생합니다. 이 오류의 정확한 원인은 3장에서 설명합니다.
+Preceding a variable included in a printf statement with an ampersand when ,in fact, that variable should not be preceded by an ampersand.
+printf 문에 포함된 변수 앞에 앰퍼샌드가 있으면 실제로 해당 변수 앞에 앰퍼샌드가 오면 안 됩니다.
+
+the arithmetic operators are all binary operators.
+산술 연산자는 모두 이항 연산자입니다.
+
+the remainder operator is an integer operator that can be used only with integer operands.
+나머지 연산자는 정수 피연산자에만 사용할 수 있는 정수 연산자입니다.
+
+fatal error that causes the program to terminate immediately without having successfully perfomred its job.
+프로그램이 작업을 성공적으로 수행하지 않고 즉시 종료되도록 하는 치명적인 오류입니다.
+
+nonfatal errors allow programs to run to completion, often producing incorrect results.
+치명적이지 않은 오류는 프로그램이 완료될 때까지 실행되도록 하여 종종 잘못된 결과를 생성합니다.
+
+C applies the operators in arithmetic expressions in a precise sequence determined by the following rules of operator precedence, which are generally the same as those in algebra.
+C는 일반적으로 대수에서와 동일한 다음 연산자 우선 순위 규칙에 의해 결정된 정확한 순서로 산술 표현식의 연산자를 적용합니다.
+
+In cases of nested, or embedded, parentheses
+중첩 또는 포함된 괄호의 경우
+
+not all expressions with several pairs of parentheses contain nested parentheses. for example the following expression does not contain nested parentheses - instead the parentheses are said to be on the same level.
+여러 쌍의 괄호가 있는 모든 표현식에 중첩 괄호가 있는 것은 아닙니다. 예를 들어 다음 표현식에는 중첩된 괄호가 포함되어 있지 않습니다. 대신 괄호는 동일한 수준에 있다고 합니다.
+
+equality and relational operators
+평등 및 관계 연산자
+
+Each conversion specifier has a corresponding argument in which a value will be stored.
+각 변환 지정자에는 값이 저장될 해당 인수가 있습니다.
+
+such as a comma in a comma-separated list.
+예를 들어 쉼표로 구분된 목록의 쉼표.
+
+It's not correct to split identifiers.
+식별자를 분할하는 것은 올바르지 않습니다.
+
+we'll study how to specify the order in which statements are executed - this is called flow of conrol.
+우리는 명령문이 실행되는 순서를 지정하는 방법을 연구할 것입니다. 이것을 제어의 흐름이라고 합니다.
+
+Although the printfs in this chapter as written are actually not insecure, these changes are responsible coding practices that will eliminate certain security vulnerabilities as we get deeper into C - we'll explain the rationale later in the book. From this point forward we use these practices in the chapter examples and you shoudl use them in your excercise solutions.
+이 장의 printfs가 실제로 안전하지 않은 것은 아니지만 이러한 변경 사항은 C에 대해 더 깊이 들어갈 때 특정 보안 취약성을 제거하는 책임 있는 코딩 관행입니다. 그 근거는 이 책의 뒷부분에서 설명하겠습니다. 이 시점부터 우리는 챕터 예제에서 이러한 사례를 사용하고 당신은 당신의 운동 솔루션에서 그것들을 사용해야 합니다.
+
+A string is sometimes called a character string, a message or a literal.
+문자열은 때로 문자열, 메시지 또는 리터럴이라고도 합니다.
